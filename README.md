@@ -31,8 +31,7 @@
   </div>
 <br>
 
-# WakaTime 统计图表
-![WakaTime 统计](metrics.plugin.wakatime.svg)
+<!-- ![WakaTime 统计](metrics.plugin.wakatime.svg) -->
 
 <!-- skill badge 技能徽章 -->
 <div align="center">
