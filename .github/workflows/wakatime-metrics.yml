@@ -1,0 +1,25 @@
+name: Generate WakaTime Metrics
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 每日自动更新
+  workflow_dispatch:  # 支持手动触发
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Generate WakaTime metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.wakatime.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_wakatime: yes
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+      - name: Commit metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update WakaTime metrics"
+          file_pattern: metrics.plugin.wakatime.svg
