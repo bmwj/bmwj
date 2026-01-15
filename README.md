@@ -33,6 +33,9 @@
 
 <!-- ![WakaTime 统计](metrics.plugin.wakatime.svg) -->
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 <!-- skill badge 技能徽章 -->
 <div align="center">
 
