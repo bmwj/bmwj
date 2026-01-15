@@ -18,6 +18,6 @@ jobs:
           SHOW_LOC_CHART: False
           SHOW_PROJECTS: False
           SHOW_SHORT_INFO: False
-          SYMBOL_VERSION: 5
+          SYMBOL_VERSION: 3
           SHOW_TOTAL_CODE_TIME: False
           SHOW_PROFILE_VIEWS: False
