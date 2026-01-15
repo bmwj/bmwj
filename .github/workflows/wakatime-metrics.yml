@@ -22,4 +22,4 @@ jobs:
           SHOW_TOTAL_CODE_TIME: False
           SHOW_PROFILE_VIEWS: False
           SHOW_TIMEZONE: False
-          BLOCKS: "⬜🟨🟩"
+          SHOW_UPDATED_DATE: False
