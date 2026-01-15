@@ -34,6 +34,17 @@
 <!-- ![WakaTime 统计](metrics.plugin.wakatime.svg) -->
 
 <!--START_SECTION:waka-->
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+JSON                     40 mins             ██████░░░░░░░░░░░░░░░░░░░   24.16 % 
+Markdown                 39 mins             ██████░░░░░░░░░░░░░░░░░░░   23.83 % 
+YAML                     34 mins             █████░░░░░░░░░░░░░░░░░░░░   20.34 % 
+Text                     13 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.98 % 
+Java Properties          12 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.53 % 
+```
+
 
 <!--END_SECTION:waka-->
 
