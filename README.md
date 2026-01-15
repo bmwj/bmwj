@@ -34,85 +34,18 @@
 <!-- ![WakaTime 统计](metrics.plugin.wakatime.svg) -->
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-133%20hrs%2022%20mins-blue?style=flat)
-
-![Profile Views](http://img.shields.io/badge/Profile%20Views-2-blue?style=flat)
-
-**🐱 My GitHub Data** 
-
-> 📦 206.1 kB Used in GitHub's Storage 
- > 
-> 🏆 11 Contributions in the Year 2026
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 26 Public Repositories 
- > 
-> 🔑 1 Private Repositories 
- > 
-**I'm an Early 🐤** 
-
-```text
-🌞 Morning                9 commits           ████████████░░░░░░░░░░░░░   47.37 % 
-🌆 Daytime                5 commits           ███████░░░░░░░░░░░░░░░░░░   26.32 % 
-🌃 Evening                5 commits           ███████░░░░░░░░░░░░░░░░░░   26.32 % 
-🌙 Night                  0 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-```
-📅 **I'm Most Productive on Thursday** 
-
-```text
-Monday                   3 commits           ████░░░░░░░░░░░░░░░░░░░░░   15.79 % 
-Tuesday                  0 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-Wednesday                3 commits           ████░░░░░░░░░░░░░░░░░░░░░   15.79 % 
-Thursday                 9 commits           ████████████░░░░░░░░░░░░░   47.37 % 
-Friday                   0 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-Saturday                 1 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
-Sunday                   3 commits           ████░░░░░░░░░░░░░░░░░░░░░   15.79 % 
-```
-
-
 📊 **This Week I Spent My Time On** 
 
 ```text
-🕑︎ Time Zone: Asia/Shanghai
-
 💬 Programming Languages: 
 JSON                     40 mins             ██████░░░░░░░░░░░░░░░░░░░   24.16 % 
 Markdown                 39 mins             ██████░░░░░░░░░░░░░░░░░░░   23.83 % 
 YAML                     34 mins             █████░░░░░░░░░░░░░░░░░░░░   20.34 % 
 Text                     13 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.98 % 
 Java Properties          12 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.53 % 
-
-🔥 Editors: 
-VS Code                  2 hrs 47 mins       █████████████████████████   100.00 % 
-
-🐱‍💻 Projects: 
-tibetan_dictionary_chrome53 mins             ████████░░░░░░░░░░░░░░░░░   32.15 % 
-bmwj-main                41 mins             ██████░░░░░░░░░░░░░░░░░░░   24.91 % 
-Vue-Springboot-Library-ma22 mins             ███░░░░░░░░░░░░░░░░░░░░░░   13.63 % 
-TBocr_tesseractJS-main   20 mins             ███░░░░░░░░░░░░░░░░░░░░░░   12.04 % 
-bmwj-main 3              11 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.94 % 
-
-💻 Operating System: 
-Mac                      2 hrs 47 mins       █████████████████████████   100.00 % 
-```
-
-**I Mostly Code in Python** 
-
-```text
-Python                   3 repos             ███████████░░░░░░░░░░░░░░   42.86 % 
-JavaScript               3 repos             ███████████░░░░░░░░░░░░░░   42.86 % 
-HTML                     1 repo              ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
 ```
 
 
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/bmwj/bmwj/main/assets/bar_graph.png)
-
-
- Last Updated on 15/01/2026 03:47:09 UTC
 <!--END_SECTION:waka-->
 
 <!-- skill badge 技能徽章 -->
