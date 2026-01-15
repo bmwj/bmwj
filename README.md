@@ -31,7 +31,7 @@
   </div>
 <br>
 
-<!-- ![WakaTime 统计](metrics.plugin.wakatime.svg) -->
+#### :bar_chart: [每月编码时间](https://github.com/muety/wakapi)
 
 <!--START_SECTION:waka-->
 
