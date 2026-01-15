@@ -29,9 +29,8 @@
     <a href="https://wakatime.com/@Baimawangjiu"><img src="https://wakatime.com/badge/user/56968e54-af7b-4364-a49e-6f6bc2be2450.svg" /></a>
 
   </div>
-<br>
-
-#### :bar_chart: [每月编码时间](https://github.com/muety/wakapi)
+  
+#### :bar_chart: [每月编码时间](https://wakapi.dev/summary?interval=any)
 
 <!--START_SECTION:waka-->
 
