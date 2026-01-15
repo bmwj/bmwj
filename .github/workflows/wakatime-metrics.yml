@@ -16,35 +16,28 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           # 提交消息
           COMMIT_MESSAGE: Update Wakapi stats
-          # 图形
-          BLOCK_COLORS: "⬜🟨🟩"
-          # 时间范围
+          # 图形配置（已优化为支持的格式）
+          PROGRESS_BAR_CHAR: "▓"
+          BLOCK_COLORS: "lightgray,yellow,green"
+          # 核心：指定全时间范围（保留你的配置，确保拉取所有时间的语言数据）
           TIME_RANGE: all_time
-          # 显示时间
+          # 显式开启语言展示功能（默认true，显式配置更稳妥，避免被隐式禁用）
+          SHOW_LANGUAGES: true
+          # 可选：自定义展示的语言数量（默认5种，改为10种可展示更多全时间语言）
+          LANGUAGES_COUNT: 10
+          # 其他原有配置保持不变
           SHOW_TIME: true
-          # 标签
           SHOW_TOTAL_CODE_TIME: False
           SHOW_PROFILE_VIEWS: False
-          # GitHub 数据
           SHOW_SHORT_INFO: False
-          # 提交统计
           SHOW_COMMIT: False
-          # 一周提交统计
           SHOW_DAYS_OF_WEEK: False
-          # 操作系统
           SHOW_OS: False
-          # 项目
           SHOW_PROJECTS: False
-          # 时区
           SHOW_TIMEZONE: False
-          # 编辑器
           SHOW_EDITORS: False
-          # 主要编写
           SHOW_LANGUAGE_PER_REPO: False
-          # 时间线
           SHOW_LOC_CHART: False
-          # 末尾更新日期
           SHOW_UPDATED_DATE: False
-          # 语言
           LOCALE: en
           CODE_LANG: rust
