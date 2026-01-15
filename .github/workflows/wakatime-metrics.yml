@@ -17,9 +17,9 @@ jobs:
           # 提交消息
           COMMIT_MESSAGE: Update Wakapi stats
           # 图形
-          BLOCKS: "⬜🟨🟩"
+          BLOCK_COLORS: "⬜🟨🟩"
           # 时间范围
-          TIME_RANGE: last_180_days
+          TIME_RANGE: all_time
           # 显示时间
           SHOW_TIME: true
           # 标签
@@ -47,3 +47,4 @@ jobs:
           SHOW_UPDATED_DATE: False
           # 语言
           LOCALE: en
+          CODE_LANG: rust
