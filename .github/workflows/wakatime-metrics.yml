@@ -1,43 +1,115 @@
+# 工作流名称：在 GitHub Actions 页面显示的名称，自定义即可
 name: Waka Readme
 
+# 触发条件：定义工作流何时自动运行
 on:
+  # 定时触发：使用 cron 表达式设置自动运行时间
+  # cron 格式：分 时 日 月 周（UTC 时间），此处为每天 UTC 时间 20 点（对应北京时间次日 4 点）自动运行
   schedule:
     - cron: '0 20 * * *'
+  # 手动触发：允许在 GitHub Actions 页面手动点击「Run workflow」触发，方便测试
   workflow_dispatch:
+
+# 任务定义：一个工作流可以包含多个 jobs，此处仅定义一个更新 README 的任务
 jobs:
+  # 任务名称：update-readme（自定义，清晰描述任务用途）
   update-readme:
+    # 任务展示名称：在 Actions 运行日志中显示的名称
     name: Update Readme with Metrics
+    # 运行环境：指定任务在 GitHub 提供的 ubuntu-latest 虚拟机中运行（推荐，兼容性最好）
     runs-on: ubuntu-latest
+    # 步骤定义：该任务需要执行的一系列操作
     steps:
+      # 步骤 1：使用第三方 GitHub Action（anmol098/waka-readme-stats），核心功能是生成 WakaTime 统计数据并更新 README
+      # @master 表示使用该 Action 的最新主分支版本
       - uses: anmol098/waka-readme-stats@master
+        # 该 Action 的配置参数：with 关键字后跟随所有需要传递的配置项
         with:
+          # 配置 1：Wakapi 服务的基础 URL（从 GitHub Secrets 中读取，避免硬编码敏感信息）
+          # 作用：指定获取 WakaTime 数据的接口地址，通常用于自建 Wakapi 或官方 Wakapi 服务
           API_BASE_URL: ${{ secrets.WAKAPI_BASE_URL }}
+          
+          # 配置 2：WakaTime API 密钥（从 GitHub Secrets 中读取，核心认证凭证）
+          # 作用：用于验证 WakaTime 账号权限，获取个人编程统计数据，不可公开泄露
           WAKATIME_API_KEY: ${{ secrets.WAKAPI_API_KEY }}
+          
+          # 配置 3：GitHub 个人访问令牌（从 GitHub Secrets 中读取）
+          # 作用：用于授权该 Action 修改仓库的 README.md 文件，完成统计数据的提交和更新
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          # 提交消息
+          
+          # 配置 4：提交消息（自定义）
+          # 作用：当 Action 更新 README 并提交代码时，对应的 Git 提交说明，方便查看提交历史
           COMMIT_MESSAGE: Update Wakapi stats
-          # 图形配置（已优化为支持的格式）
+          
+          # 配置 5：进度条字符（定义统计图表中进度条的显示字符）
+          # 作用：设置编程语言占比、时长等进度条的单元字符，支持 ▓、#、= 等单字符，兼容性最好
           PROGRESS_BAR_CHAR: "▓"
+          
+          # 配置 6：图形块颜色（定义进度条的三色渐变，对应空白、半满、全满状态）
+          # 作用：设置进度条的颜色样式，支持英文颜色名或十六进制颜色码，用英文逗号分隔，必须填写 3 个颜色
           BLOCK_COLORS: "lightgray,yellow,green"
-          # 核心：指定全时间范围（保留你的配置，确保拉取所有时间的语言数据）
+          
+          # 配置 7：时间范围（核心配置，指定获取统计数据的时间跨度）
+          # 作用：拉取对应时间段的 WakaTime 数据，all_time 表示获取从注册至今的所有时间数据
+          # 可选值：all_time / last_7_days / last_30_days / last_90_days / last_year
           TIME_RANGE: all_time
-          # 显式开启语言展示功能（默认true，显式配置更稳妥，避免被隐式禁用）
-          SHOW_LANGUAGES: true
-          # 可选：自定义展示的语言数量（默认5种，改为10种可展示更多全时间语言）
-          LANGUAGES_COUNT: 10
-          # 其他原有配置保持不变
+          
+          # 配置 8：是否显示编程时长（布尔值，true 显示 / false 隐藏）
+          # 作用：在统计图表中展示各类编程语言、项目的具体使用时长
           SHOW_TIME: true
+          
+          # 配置 9：是否显示总编程时长（布尔值，false 隐藏 / true 显示）
+          # 作用：展示账号注册至今的累计编程总时长，此处设置为隐藏，简化展示内容
           SHOW_TOTAL_CODE_TIME: False
+          
+          # 配置 10：是否显示个人资料访问量（布尔值，false 隐藏 / true 显示）
+          # 作用：展示 GitHub 个人资料的访问次数统计，此处设置为隐藏
           SHOW_PROFILE_VIEWS: False
+          
+          # 配置 11：是否显示简短个人信息（布尔值，false 隐藏 / true 显示）
+          # 作用：展示 GitHub 账号的简短信息（如仓库数量、粉丝数等），此处设置为隐藏
           SHOW_SHORT_INFO: False
+          
+          # 配置 12：是否显示 GitHub 提交统计（布尔值，false 隐藏 / true 显示）
+          # 作用：展示近期 GitHub 代码提交次数、提交趋势等，此处设置为隐藏
           SHOW_COMMIT: False
+          
+          # 配置 13：是否显示一周内每日提交统计（布尔值，false 隐藏 / true 显示）
+          # 作用：按星期几展示提交分布情况，此处设置为隐藏
           SHOW_DAYS_OF_WEEK: False
+          
+          # 配置 14：是否显示使用的操作系统统计（布尔值，false 隐藏 / true 显示）
+          # 作用：展示编程时使用的操作系统（如 Windows、Mac、Linux）占比，此处设置为隐藏
           SHOW_OS: False
+          
+          # 配置 15：是否显示项目统计（布尔值，false 隐藏 / true 显示）
+          # 作用：展示近期参与的项目及对应编程时长，此处设置为隐藏
           SHOW_PROJECTS: False
+          
+          # 配置 16：是否显示时区信息（布尔值，false 隐藏 / true 显示）
+          # 作用：展示个人编程使用的时区，此处设置为隐藏
           SHOW_TIMEZONE: False
+          
+          # 配置 17：是否显示使用的编辑器统计（布尔值，false 隐藏 / true 显示）
+          # 作用：展示编程时使用的编辑器（如 VS Code、PyCharm）占比，此处设置为隐藏
           SHOW_EDITORS: False
+          
+          # 配置 18：是否显示每个仓库对应的编程语言（布尔值，false 隐藏 / true 显示）
+          # 作用：按仓库维度展示使用的编程语言，此处设置为隐藏，避免覆盖全时间语言统计
           SHOW_LANGUAGE_PER_REPO: False
+          
+          # 配置 19：是否显示代码行数趋势图表（布尔值，false 隐藏 / true 显示）
+          # 作用：展示近期代码行数的增减趋势图表，此处设置为隐藏，简化展示内容
           SHOW_LOC_CHART: False
+          
+          # 配置 20：是否显示统计数据更新日期（布尔值，false 隐藏 / true 显示）
+          # 作用：在 README 中展示本次统计数据的最后更新时间，此处设置为隐藏
           SHOW_UPDATED_DATE: False
+          
+          # 配置 21：界面语言（国际化配置）
+          # 作用：设置统计图表的界面文字语言，en 为英文，支持 zh-CN 等中文格式（需 Action 兼容）
           LOCALE: en
+          
+          # 配置 22：项目核心开发语言（自定义配置）
+          # 作用：标记该仓库的核心开发语言为 Rust，仅作展示说明，不影响统计数据
           CODE_LANG: rust
