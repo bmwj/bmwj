@@ -41,14 +41,6 @@ jobs:
           # 作用：当 Action 更新 README 并提交代码时，对应的 Git 提交说明，方便查看提交历史
           COMMIT_MESSAGE: Update Wakapi stats
           
-          # 配置 5：进度条字符（定义统计图表中进度条的显示字符）
-          # 作用：设置编程语言占比、时长等进度条的单元字符，支持 ▓、#、= 等单字符，兼容性最好
-          PROGRESS_BAR_CHAR: "▓"
-          
-          # 配置 6：图形块颜色（定义进度条的三色渐变，对应空白、半满、全满状态）
-          # 作用：设置进度条的颜色样式，支持英文颜色名或十六进制颜色码，用英文逗号分隔，必须填写 3 个颜色
-          BLOCK_COLORS: "lightgray,yellow,green"
-          
           # 配置 7：时间范围（核心配置，指定获取统计数据的时间跨度）
           # 作用：拉取对应时间段的 WakaTime 数据，all_time 表示获取从注册至今的所有时间数据
           # 可选值：all_time / last_7_days / last_30_days / last_90_days / last_year
@@ -57,7 +49,7 @@ jobs:
           # 配置 8：是否显示编程时长（布尔值，true 显示 / false 隐藏）
           # 作用：在统计图表中展示各类编程语言、项目的具体使用时长
           SHOW_TIME: true
-          
+
           # 配置 9：是否显示总编程时长（布尔值，false 隐藏 / true 显示）
           # 作用：展示账号注册至今的累计编程总时长，此处设置为隐藏，简化展示内容
           SHOW_TOTAL_CODE_TIME: False
@@ -109,7 +101,3 @@ jobs:
           # 配置 21：界面语言（国际化配置）
           # 作用：设置统计图表的界面文字语言，en 为英文，支持 zh-CN 等中文格式（需 Action 兼容）
           LOCALE: en
-          
-          # 配置 22：项目核心开发语言（自定义配置）
-          # 作用：标记该仓库的核心开发语言为 Rust，仅作展示说明，不影响统计数据
-          CODE_LANG: python
