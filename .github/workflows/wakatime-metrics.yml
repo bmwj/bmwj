@@ -20,6 +20,8 @@ jobs:
           BLOCKS: "⬜🟨🟩"
           # 时间范围
           TIME_RANGE: last_180_days
+          # 显示时间
+          SHOW_TIME: true
           # 标签
           SHOW_TOTAL_CODE_TIME: False
           SHOW_PROFILE_VIEWS: False
