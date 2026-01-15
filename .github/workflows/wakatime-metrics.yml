@@ -112,4 +112,4 @@ jobs:
           
           # 配置 22：项目核心开发语言（自定义配置）
           # 作用：标记该仓库的核心开发语言为 Rust，仅作展示说明，不影响统计数据
-          CODE_LANG: rust
+          CODE_LANG: python
