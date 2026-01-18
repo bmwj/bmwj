@@ -30,7 +30,7 @@
 
   </div>
   
-#### :bar_chart: [每月编码时间](https://wakapi.dev/summary?interval=any)
+<!--#### :bar_chart: [每月编码时间](https://wakapi.dev/summary?interval=any)-->
 
 <!--START_SECTION:waka-->
 **I'm an Early 🐤** 
